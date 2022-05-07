@@ -29,9 +29,7 @@ with mp_pose.Pose(
         results.pose_landmarks,
         mp_pose.POSE_CONNECTIONS,
         landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
-    for id, lm in enumerate(results.pose_landmarks):
-      print(id,lm)
-
+    
 
     # Flip the image horizontally for a selfie-view display.
     cv2.imshow('MediaPipe Pose', cv2.flip(image, 1))
