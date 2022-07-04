@@ -8,5 +8,5 @@ class voice:
         engine.say(query)
         engine.runAndWait()
 
-query = "9"
-voice.speak(query)
+# query = "9"
+# voice.speak(query)

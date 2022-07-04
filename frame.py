@@ -4,6 +4,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 import hand_tracking_module as htm
 import cv2
+import voice
 
 win= Tk()
 
