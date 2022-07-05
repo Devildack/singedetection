@@ -37,14 +37,18 @@ def show_frames():
     if mark_position:
         id8,x1,x2=mark_position[8]
         id4,y1,y2=mark_position[4]
+        id5,z1,z2 = mark_position[20] 
         dist = ((((x2 - x1 )**2) + ((y2-y1)**2) )**0.5)
         hand_track_lable.configure(text="Hand Detect")
         if dist < 50:
             text_label.configure(text="okkkk")
+        elif (y1,y2)>(z1,z2):
+            text_label.configure(text="Done")
         else:
             text_label.configure(text=" ")
     else:
         hand_track_lable.configure(text="No Hand Detect")
+        text_label.configure(text=" ")
 
     cv2image= cv2.cvtColor(cap.read()[1],cv2.COLOR_BGR2RGB)
     img = Image.fromarray(cv2image)
